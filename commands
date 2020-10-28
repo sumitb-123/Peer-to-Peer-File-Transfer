@@ -1,0 +1,7 @@
+ g++ -o tracker tracker.cpp -pthread
+./tracker tracker_info.txt 1
+ g++ -o client2 finalclient1.cpp -pthread -lssl -lcrypto
+./client2 127.0.0.1 11123 tracker_info.txt
+g++ -o client finalclient1.cpp -pthread -lssl -lcrypto
+./client 127.0.0.1 11124 tracker_info.txt
+
